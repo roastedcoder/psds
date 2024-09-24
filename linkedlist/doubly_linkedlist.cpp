@@ -36,14 +36,14 @@ class LinkedList {
   void print() {
     // TODO: Implement this
   }
-}
+};
 
 int main() {
-  LinkedList ll;
-  ll.push_back(1);
-  ll.push_back(2);
-  ll.push_back(3);
-  ll.push_front(0);
-  ll.push_front(-1);
-  ll.print();
+  // LinkedList ll;
+  // ll.push_back(1);
+  // ll.push_back(2);
+  // ll.push_back(3);
+  // ll.push_front(0);
+  // ll.push_front(-1);
+  // ll.print();
 }
