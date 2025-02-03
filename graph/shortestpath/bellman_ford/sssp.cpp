@@ -20,6 +20,8 @@ void bellmanFord(int n, int m, vector<Edge> edges, int src) {
 }
 
 void bellmanFordOptimized(int n, int m, vector<Edge> edges, int src) {
+  // works only if there is no negative cycle
+  // wegiht can be negative
   // unrestricted to n-1 iterations
 
   vector<int> dist(n, INT_MAX);
@@ -44,8 +46,10 @@ void bellmanFordOptimized(int n, int m, vector<Edge> edges, int src) {
 }
 
 int main() {
-  int n = 5, m = 8;
   vector<Edge> edges;
+
+// example 1
+  int n = 5, m = 8;
   Edge e1 = {0, 1, -1};
   Edge e2 = {0, 2, 4};
   Edge e3 = {1, 2, 3};
@@ -62,7 +66,18 @@ int main() {
   edges.push_back(e6);
   edges.push_back(e7);
   edges.push_back(e8);
-
   bellmanFord(n, m, edges, 0);
   bellmanFordOptimized(n, m, edges, 0);
+
+// example 2
+
+  // int n = 3, m = 3;
+  // Edge e1 = {1, 0, -10};
+  // Edge e2 = {0, 2, 5};
+  // Edge e3 = {2, 1, 2};
+  // edges.push_back(e1);
+  // edges.push_back(e2);
+  // edges.push_back(e3);
+  // bellmanFord(n, m, edges, 0);
+  // bellmanFordOptimized(n, m, edges, 0); // this doesnot work
 }
