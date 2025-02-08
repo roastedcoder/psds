@@ -84,10 +84,7 @@ class LowestCommonAncestor {
 int main() {
   int n, e;
   cin >> n >> e;
-  int liftSize = ceil(log2(n));
-  vector<vector<int> > lca(n+1, vector<int>(liftSize + 1, -1));
   vector<vector<int> > tree(n+1);
-  vector<int> depth(n+1, 0);
 
   for(int i = 0; i<e; i++) {
     int a, b;
@@ -128,6 +125,8 @@ TC: 1
 7 8
 4 1
 2 8
+
+[2 1 2 1 2]
 
 
         1
