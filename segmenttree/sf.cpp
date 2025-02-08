@@ -103,3 +103,21 @@ int main() {
   cout << st.query(0, 4) << endl; // 18
   cout << st.query(2, 4) << endl; // 13
 }
+
+/*
+Advanced Problems:
+- Finding the maximum and the number of times it appears
+
+- Find the number of zeros in a given range, and additionally find the index of the k-th zero using a second function.
+
+- For a given value x we have to quickly find smallest index i such that the sum of the first i elements of the array  
+  a[] is greater or equal to x (assuming that the array a[] only contains non-negative values).
+
+- for a given value x and a range a[l...r] find the smallest i in the range a[l...r] , such that a[i] is greater than x.
+
+- Finding subsegments with the maximal sum
+
+- We want to answer queries of the following form: for three given numbers (l, r, x) we have to find the minimal number
+  in the segment a[l...r] which is greater than or equal to x. (with/without modification queries.)
+
+*/
