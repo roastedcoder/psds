@@ -50,15 +50,17 @@ class LowestCommonAncestor {
       }
     }
 
+    // both x and y were on same branch
     if(x == y) return x;
 
     for(int i = liftSize - 1; i>=0; i--) {
+      // lift when x and y has no common ancestor for current 2^i
       if(lift[x][i] != lift[y][i]) {
         x = lift[x][i];
         y = lift[y][i];
       }
     }
-
+    // only parent can be left in this way so we return parent of x or y
     return lift[x][0];
   }
 
