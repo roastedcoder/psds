@@ -3,6 +3,14 @@ using namespace std;
 
 // dp: n^2, n^2
 
+bool isPalindrome(string &s, int i, int j) {
+  while(i <= j) {
+    if(s[i] != s[j]) return false;
+    i++, j--;
+  }
+  return true;
+}
+
 void preComputePalindrome(string &s, vector<vector<bool> > &isPal) {
   int n = s.length();
   for(int len = 1; len <= n; len++) {  // iterate over each length
@@ -19,6 +27,7 @@ int solve(string &s, int i, int j, vector<vector<int> > &dp, vector<vector<bool>
   if(i >= j) return 0;
 
   if(isPal[i][j]) return dp[i][j] = 0;
+  // if(isPalindrome(s, i, j)) return 0; // this would also work since we anyways loop through i to j
 
   if(dp[i][j] != -1) return dp[i][j];
 
