@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// recursion: 2^n
+// recursion: n * 2^n
 
 bool isPalindrome(string &s, int i, int j) {
   while(i <= j) {

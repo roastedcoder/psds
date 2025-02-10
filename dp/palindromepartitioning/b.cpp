@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// dp: n^2, n^2
+// dp: n^3, n^2
 
 bool isPalindrome(string &s, int i, int j) {
   while(i <= j) {
@@ -12,7 +12,7 @@ bool isPalindrome(string &s, int i, int j) {
 }
 
 int solve(string &s, int i, int j, vector<vector<int> > &dp) {
-  if(i > j) return 0;
+  if(i >= j) return 0;
 
   if(isPalindrome(s, i, j)) return 0;
 
